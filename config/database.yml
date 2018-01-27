@@ -1,0 +1,16 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: restaurant_development
+  username: root
+  password:
+
+test:
+  <<: *default
+  database: restaurant_test
+  username: root
+  password:
