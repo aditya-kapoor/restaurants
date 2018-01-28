@@ -6,9 +6,9 @@ class GuestCapacityValidator < ActiveModel::Validator
       max_guest_capacity = table.max_guest_capacity
 
       if(min_guest_capacity > capacity)
-        record.errors[:base] << "Number of guest should be greater than #{min_guest_capacity}"
+        record.errors[:guest_count] << "should be greater than #{min_guest_capacity}"
       elsif capacity > max_guest_capacity
-        record.errors[:base] << "Number of guest should be less than #{max_guest_capacity}"
+        record.errors[:guest_count] << "should be less than #{max_guest_capacity}"
       end
     end
   end
