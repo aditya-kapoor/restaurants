@@ -1,0 +1,122 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CRM",
+		"_postman_id": "6e2b2627-4221-6627-e1bd-63d749767919",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurant Create",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"restaurant\": {\n\t\t\"name\": \"Sample Restaurant\",\n\t\t\"phone\": \"1234567890\",\n\t\t\"email\": \"some_restaurant@gmail.com\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Table Creation",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants/3/tables",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"table\": {\n\t\t\"name\": \"Table No. 1\",\n\t\t\"min_guest_capacity\": 5,\n\t\t\"max_guest_capacity\": 9\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant Update",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants/3",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"restaurant\": {\n\t\t\"name\": \"Sample Restaurant\",\n\t\t\"phone\": \"1234567890\",\n\t\t\"email\": \"some_restaurant@gmail.com\",\n\t\t\"shift_timings\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Morning shift\",\n\t\t\t\t\"start_time\": \"09:00\",\n\t\t\t\t\"end_time\": \"13:00\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Afternon Shift\",\n\t\t\t\t\"start_time\": \"15:00\",\n\t\t\t\t\"end_time\": \"18:00\"\n\t\t\t\t\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Evening Shift\",\n\t\t\t\t\"start_time\": \"20:00\",\n\t\t\t\t\"end_time\": \"23:00\"\n\t\t\t}\n\t\t]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation Listings",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants/3/reservations",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation Create",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants/3/reservations",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reservation\": {\n\t\t\"table_id\": 1,\n\t\t\"visitor_id\": 1,\n\t\t\"guest_count\": 9,\n\t\t\"start_time\": \"2018-01-28 17:00:00 UTC\",\n\t\t\"end_time\": \"2018-01-28 18:00:00 UTC\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation Update",
+			"request": {
+				"url": "localhost:3000/api/v1/restaurants/3/reservations/4",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reservation\": {\n\t\t\"table_id\": 1,\n\t\t\"visitor_id\": 1,\n\t\t\"guest_count\": 7,\n\t\t\"start_time\": \"2018-01-28 17:30:00 UTC\",\n\t\t\"end_time\": \"2018-01-28 18:30:00 UTC\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

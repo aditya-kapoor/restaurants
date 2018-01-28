@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample Restaurant Reservation App.
 
-Things you may want to cover:
+### Installation
 
-* Ruby version
+```
+git clone git@github.com:aditya-kapoor/restaurants.git
+bundle install
+rake db:create
+rails server
+```
 
-* System dependencies
+#### API Endpoints
 
-* Configuration
+Right now, there are 4 API endpoints provided.
 
-* Database creation
+1. Restaurant Creation
+2. Table Creation
+3. Visitor Creation
+4. Reservation Listing
+5. Reservation Creation
+6. Reservation Updation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use the CRM.postman_collection file to use it the postman.
