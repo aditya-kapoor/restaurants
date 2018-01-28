@@ -10,9 +10,13 @@ gem 'mysql2'
 gem 'puma', '~> 3.7'
 gem 'active_model_serializers'
 gem 'phony_rails'
+gem 'tod'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 group :development do
