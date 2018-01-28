@@ -10,6 +10,7 @@ gem 'mysql2'
 gem 'puma', '~> 3.7'
 gem 'active_model_serializers'
 gem 'phony_rails'
+gem 'tod'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

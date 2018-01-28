@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128082813) do
+ActiveRecord::Schema.define(version: 20180128085029) do
+
+  create_table "reservations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "guest_count"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.bigint "restaurant_id"
+    t.bigint "table_id"
+    t.bigint "visitor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["table_id"], name: "index_reservations_on_table_id"
+    t.index ["visitor_id"], name: "index_reservations_on_visitor_id"
+  end
 
   create_table "restaurant_visitors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "restaurant_id"

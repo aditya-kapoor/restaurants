@@ -4,6 +4,7 @@ class Restaurant < ApplicationRecord
   has_many :restaurant_visitors
   has_many :visitors, through: :restaurant_visitors
   has_many :tables
+  has_many :reservations
 
   phony_normalize :phone, default_country_code: 'MY'
   serialize :shift_timings, Array
