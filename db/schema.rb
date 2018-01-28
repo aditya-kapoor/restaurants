@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180127114043) do
+ActiveRecord::Schema.define(version: 20180128082813) do
 
   create_table "restaurant_visitors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "restaurant_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180127114043) do
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "shift_timings"
   end
 
   create_table "tables", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
